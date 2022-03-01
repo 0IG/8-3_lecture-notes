@@ -11,6 +11,22 @@
 let arr_1 = [3, 5, 22, 5, 7, 2, 45, 75, 89, 21, 2]; // --> 276
 let arr_2 = [9, 2, 42, 55, 71, 22, 4, 5, 90, 25, 26]; // --> 351
 
+function sumArrs (arr_1, arr_2){
+    let arrOneSum = 0
+    let arrTwoSum = 0
+    let sum = 0
+    for (let elm of arr_1){
+        arrOneSum += elm
+    } for (let elm of arr_2){
+        arrTwoSum += elm
+    } sum += (arrOneSum + arrTwoSum)
+    console.log(sum)
+    return sum
+    
+};
+
+sumArrs(arr_1, arr_2)
+
 /**
  * EXERCISE 2
  *
@@ -33,7 +49,17 @@ let arr_2 = [9, 2, 42, 55, 71, 22, 4, 5, 90, 25, 26]; // --> 351
  * 22
  */
 let n1 = 22;
+function onlyEvens(n1){
+    let arr = []
+    for (i = 0; i < n1.length; i++){
+        if (n1[i] % 2 === 0){
+            arr.push(n1[i] + '<br>' )
+            console.log(arr)
+        }
+    } return arr
+};
 
+onlyEvens(n1)
 /**
  * EXERCISE 3
  *
@@ -90,6 +116,21 @@ let str1 = 'javascript';
  */
 
 let str2 = `don't know why`;
+
+function hasY (str2){
+    let arr = []
+    arr.push(str2)
+    for (let i = 0; i < arr.length; i++){
+        console.log(arr)
+        if (arr[i].includes('y')){
+            return console.log('Yes')
+        } else {
+            return console.log(`No`)
+        }
+};
+}
+
+hasY(str2)
 
 /**
  * EXERCISE 7

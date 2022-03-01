@@ -10,12 +10,21 @@ const student = {
   rollno: 12,
 };
 
+function keyReturn (student){
+  console.log(Object.keys(student))
+};
+
+keyReturn(student)
+
+
 /**
  * 2
  * Write a function to delete the rollno property from the following object.
  * Print the object before AND after deleting the property.
  */
-
+  function deleteIt(student){
+    
+  }
 /**
  * 3
  *

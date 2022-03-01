@@ -10,3 +10,24 @@ const trainCommuteTimes = [30, 62, 41, 39, 38, 31, 51, 53, 34, 40];
 
 // Hint: write a function that computes the average of an array of numbers.
 //   Use this function to find the average commute time for the train and for your car.
+
+function betterTravel(carCommuteTimes, trainCommuteTimes){
+    let carSum = 0
+    let carAvg = 0
+    let trainSum = 0
+    let trainAvg = 0
+    for (i = 0; i < carCommuteTimes.length; i++){
+        carSum += carCommuteTimes[i]
+        carAvg = carSum / carCommuteTimes.length
+    } for (i = 0; i < trainCommuteTimes.length; i++){
+        trainSum += trainCommuteTimes[i]
+        trainAvg = trainSum / trainCommuteTimes.length
+    }
+    if (trainAvg > carAvg){
+        console.log("The car provides a faster commute.")
+    } else {
+        console.log("The train proivdes a faster commute")
+    }
+};
+
+betterTravel(carCommuteTimes, trainCommuteTimes)

@@ -10,8 +10,30 @@
 let priceOfHouse = "€1.500.000";
 let priceOfCar = "€20.000";
 
-if (priceOfHouse > priceOfCar) {
-  console.log("The house is more expensive");
-} else {
-  console.log("The car is more expensive");
-}
+// if (priceOfHouse > priceOfCar) {
+//   console.log("The house is more expensive");
+// } else {
+//   console.log("The car is more expensive");
+// }
+
+function stringConvert(priceOfCar, priceOfHouse){
+  let newPriceOfCar = priceOfCar.replace("€", '')
+  let newPriceOfHouse = priceOfHouse.replace("€", '')
+  for (i = 0; i < newPriceOfCar.length; i++){
+    if (newPriceOfCar[i] === "."){
+      newPriceOfCar = newPriceOfCar.replace(".", '')
+    }
+  } for (i = 0; i < newPriceOfHouse.length; i++){
+    if (newPriceOfHouse[i] === "."){
+      newPriceOfHouse = newPriceOfHouse.replace(".", '')
+    }
+  } newPriceOfHouse = Number(newPriceOfHouse)
+    newPriceOfCar = Number(newPriceOfCar)
+  if (newPriceOfHouse > newPriceOfCar) {
+    console.log("The house is more expensive");
+  } else {
+    console.log("The car is more expensive");
+  } 
+};
+
+stringConvert(priceOfCar, priceOfHouse)

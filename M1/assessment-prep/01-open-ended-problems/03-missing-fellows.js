@@ -79,3 +79,37 @@ let googleSheetsData = [
   "deREk pETeRSOn",
   "ANToNIO shIVeRs",
 ];
+
+function fixer (googleSheetsData, salesforceData){
+  let missng = []
+  let googleArr = []
+  let salesArr = []
+  for (let elm of googleSheetsData){
+    googleArr.push(elm.toLowerCase())
+  } for (const elm of salesforceData){
+    salesArr.push(elm.toLowerCase())
+  } for (const elm of salesforceData){
+
+    if (!googleArr.includes(elm)){
+      missng.push(elm)
+    }
+  } 
+  return missing
+};
+
+fixer(googleSheetsData, salesforceData)
+
+
+//   let missing = []
+//   let googleArr = []
+//   let salesArr = []
+//   for (let elm of googleSheetsData){
+//     googleArr.push(elm.toLowerCase)
+//   } for (const elm of salesforceData){
+//     salesArr.push(elm.toLowerCase)
+//   } for (const elm of salesforceData){
+//     if (!googleSheetsData.includes(elm)){
+//       missing.push(elm)
+//     }
+//   } return missing
+// };
